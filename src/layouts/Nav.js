@@ -11,7 +11,7 @@ import { ROUTE_CHANGED_EVENT } from "../framework/app";
  * @returns {void}
  */
 export const Nav = (element) => {
-  const appName = '<img src="/public/backgrounds/logo.jpeg" alt="E-commerce Logo" class="navbar-logo">';
+  const appName = '<img src="/backgrounds/logo.jpeg" alt="E-commerce Logo" class="navbar-logo">';
 
   /**
    * @type {Link[]}
