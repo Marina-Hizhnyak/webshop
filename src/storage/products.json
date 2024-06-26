@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "Jet backpack",
+    "price": 10.0,
+    "description": "With the Jet Backpack, your pet can explore the world safely and comfortably. Don’t leave your furry friend behind – take them along on your next adventure with the Jet Backpack!",
+    "image": "/backgrounds/bag.jpeg",
+    "category": "Bags",
+    "dimensions": "16.5",
+    "weight": "3 kg",
+    "material": "Durable, water-resistant fabric",
+    "colors": "Jet Black, Sky Blue, Forest Green"
+  },
+  {
+    "id": 2,
+    "name": "Mouse-Shaped Backpack with Fan for Cats",
+    "price": 20.0,
+    "description": "Introducing the Mouse-Shaped Backpack with Fan, the ultimate blend of fun, comfort, and practicality for your beloved feline friend! This unique pet carrier is designed to resemble a cute mouse, complete with ears and a tail, while providing a cool and comfortable environment for your cat.",
+    "image": "/backgrounds/bag1.jpeg",
+    "category": "Bags"
+  },
+  {
+    "id": 3,
+    "name": "Propeller Backpack for Cats",
+    "price": 30.0,
+    "description": "With the Mouse-Shaped Backpack with Fan, you can take your cat along for all your adventures in style and comfort. Keep your feline friend cool, safe, and happy with this delightful and innovative pet carrier!",
+    "image": "/backgrounds/bag2.jpeg",
+    "category": "Bags"
+  },
+  {
+    "id": 4,
+    "name": "Produit 1",
+    "price": 10.0,
+    "description": "Description du produit 1",
+    "image": "/backgrounds/hat1.jpeg",
+    "category": "Hats"
+  },
+  {
+    "id": 5,
+    "name": "Produit 2",
+    "price": 20.0,
+    "description": "Description du produit 2",
+    "image": "/backgrounds/glasse.jpeg",
+    "category": "Glasses"
+  },
+  {
+    "id": 6,
+    "name": "Produit 3",
+    "price": 30.0,
+    "description": "Description du produit 3",
+    "image": "/backgrounds/glasse1.jpeg",
+    "category": "Glasses"
+  },
+  {
+    "id": 7,
+    "name": "Produit 1",
+    "price": 10.0,
+    "description": "Description du produit 1",
+    "image": "/backgrounds/bag3.jpeg",
+    "category": "Bags"
+  },
+  {
+    "id": 8,
+    "name": "Produit 2",
+    "price": 20.0,
+    "description": "Description du produit 2",
+    "image": "/backgrounds/bag4.jpeg",
+    "category": "Bags"
+  },
+  {
+    "id": 9,
+    "name": "Produit 3",
+    "price": 30.0,
+    "description": "Description du produit 3",
+    "image": "/backgrounds/bag5.jpeg",
+    "category": "Bags"
+  }
+]

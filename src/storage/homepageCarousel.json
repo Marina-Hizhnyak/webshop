@@ -1,0 +1,17 @@
+[
+  {
+    "src": "/backgrounds/bags.jpeg",
+    "title": "First slide label",
+    "description": "Some representative placeholder content for the first slide."
+  },
+  {
+    "src": "/backgrounds/hats.jpeg",
+    "title": "Second slide label",
+    "description": "Some representative placeholder content for the second slide."
+  },
+  {
+    "src": "/backgrounds/glasses.jpeg",
+    "title": "Third slide label",
+    "description": "Some representative placeholder content for the third slide."
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Bags",
+    "description": "Description du categorie 1",
+    "image": "/backgrounds/bags.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Hats",
+    "description": "Description de categorie 2",
+    "image": "/backgrounds/hats.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Glasses",
+    "description": "Description de categorie 3",
+    "image": "/backgrounds/glasses.jpeg"
+  }
+]
