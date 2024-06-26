@@ -118,8 +118,26 @@ export const Nav = (element) => {
     changePageTitle();
     element.dispatchEvent(new CustomEvent(ROUTE_CHANGED_EVENT));
   });
+
   let btnCount = document.querySelector("#cart-count");
+
+
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let initialCount = cart.reduce((sum, product) => sum + product.quantite, 0);
+  btnCount.innerText = initialCount;
+
   document.addEventListener("add", () => btnCount.innerText = parseInt(btnCount.innerText) + 1);
-  document.addEventListener("delete", () => btnCount.innerText = parseInt(btnCount.innerText) - 1);
-  document.addEventListener("clear", () => btnCount.innerText = 0)
-};
+  document.addEventListener("delete", (event) => {
+    const deletedCount = event.detail.deletedCount;
+    btnCount.innerText = parseInt(btnCount.innerText) - deletedCount;
+  });
+  document.addEventListener("clear", () => btnCount.innerText = 0);
+  document.addEventListener("addQuantity", (event) => {
+    const change = event.detail.change;
+    btnCount.innerText = parseInt(btnCount.innerText) + change;
+  });
+  document.addEventListener("deleteQuantity", (event) => {
+    const change = event.detail.change;
+    btnCount.innerText = parseInt(btnCount.innerText) + change;
+  });
+}

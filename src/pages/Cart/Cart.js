@@ -34,10 +34,10 @@ export const Cart = (element) => {
   // Fonction pour afficher le cart
   const render = () => {
     productsList.innerHTML = products.map(product => `
-      <div class="card mb-3">
-        <div class="row no-gutters">
+      <div class="card mb-3" style="height: 300px;">
+        <div class="row no-gutters d-flex flex-shrink-1">
           <div class="col-md-4">
-            <img src="${product.image}" class="card-img" alt="${product.name}">
+            <img src="${product.image}" class="card-img h-50" alt="${product.name}">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -73,6 +73,7 @@ export const Cart = (element) => {
     document.querySelectorAll('.btn-delete').forEach(button => {
       button.addEventListener('click', () => {
         const productId = button.getAttribute('data-id');
+        console.log(productId);
         deleteProduct(productId);
       });
     });
@@ -86,25 +87,52 @@ export const Cart = (element) => {
     totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
   };
 
-  // Fonction pour mettre à jour la quantité d'un produit
+
   const updateQuantity = (productId, change) => {
     const product = products.find(product => product.id == productId);
     if (product) {
-      product.quantite += change;
-      if (product.quantite <= 0) {
-        product.quantite = 1;
+      if (change > 0) {
+        // Увеличение количества
+        product.quantite += change;
+        localStorage.setItem('cart', JSON.stringify(products));
+        let event = new CustomEvent("addQuantity", {
+          detail: { productId: productId, change: change }
+        });
+        document.dispatchEvent(event);
+
+      } else if (change < 0) {
+
+        product.quantite += change;
+        if (product.quantite <= 0) {
+          product.quantite = 0;
+          deleteProduct(productId);
+          let event = new CustomEvent("deleteQuantity", {
+            detail: { productId: productId, change: change }
+          });
+          document.dispatchEvent(event);
+          return;
+        }
+        localStorage.setItem('cart', JSON.stringify(products));
+
       }
-      localStorage.setItem('cart', JSON.stringify(products));
       render();
     }
   };
 
-  // Fonction pour supprimer un produit du panier
+
+
   const deleteProduct = (productId) => {
+    let deletedProducts = products.filter(product => product.id == productId);
     products = products.filter(product => product.id != productId);
     localStorage.setItem('cart', JSON.stringify(products));
-    let event = new Event("delete", { bubbles: true });
+    let event = new CustomEvent("delete", {
+      detail: {
+        productId: productId,
+        deletedCount: deletedProducts.reduce((sum, product) => sum + product.quantite, 0)
+      }
+    });
     document.dispatchEvent(event);
+    console.log(products);
     render();
   };
 
