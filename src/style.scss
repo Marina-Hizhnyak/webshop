@@ -12,12 +12,12 @@ a {
 }
 
 body {
-  cursor: url("/public/backgrounds/paw-white.png"), auto;
+  cursor: url("/backgrounds/paw-white.png"), auto;
 }
 
 a,
 button {
-  cursor: url("/public/backgrounds/paw_black.png"), auto;
+  cursor: url("/backgrounds/paw_black.png"), auto;
 }
 
 /* CSS pour réduire la taille du carrousel et le centrer */
@@ -33,7 +33,7 @@ button {
 }
 
 .custom-header {
-  background-image: url("/public/backgrounds/bgd4.jpg");
+  background-image: url("/backgrounds/bgd4.jpg");
   background-repeat: repeat;
   // background-position: 0 0;
   background-size: contain;
